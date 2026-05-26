@@ -36,7 +36,6 @@ jobs:
 
       - name: Wait for service health
         run: |
-          # Đợi tối đa 60 giây cho service khởi động
           npx wait-on http://localhost:8000/health --timeout 60000 || (echo "Service failed to start! Printing logs:" && docker logs fit4110-iot-lab04 && exit 1)
 
       - name: Run Newman against Docker container
