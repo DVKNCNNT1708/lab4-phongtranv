@@ -6,18 +6,18 @@ Mỗi nhóm bắt đầu từ repo mẫu này và thay phần IoT bằng service
 
 ## Việc chung cho mọi nhóm
 
-- [ ] Copy contract từ Lab 03 vào thư mục `contracts/`.
-- [ ] Đảm bảo service có `GET /health`.
-- [ ] Viết hoặc cập nhật `Dockerfile`.
-- [ ] Viết `.dockerignore`.
-- [ ] Viết `.env.example`.
-- [ ] Viết `RUN_LOCAL.md`.
-- [ ] Build image.
-- [ ] Run container.
-- [ ] Chạy Postman Collection từ Lab 03 trên container.
-- [ ] Xuất Newman report.
-- [ ] Chụp bằng chứng `/health` hoặc log container.
-- [ ] Ghi tag image đã push.
+- [x] Copy contract từ Lab 03 vào thư mục `contracts/`.
+- [x] Đảm bảo service có `GET /health`.
+- [x] Viết hoặc cập nhật `Dockerfile` (Đã patch lỗi bằng `sed`).
+- [x] Viết `.dockerignore`.
+- [x] Viết `.env.example`.
+- [x] Viết `RUN_LOCAL.md`.
+- [x] Build image (Đã build thành công với `--no-cache`).
+- [x] Run container.
+- [x] Chạy Postman Collection từ Lab 03 trên container (Pass 100%).
+- [x] Xuất Newman report (Đã có trong folder `reports/`).
+- [x] Chụp bằng chứng `/health` hoặc log container (Đã lưu trong folder `Evidence/`).
+- [x] Ghi tag image đã push (Đã có image tag `fit4110/iot-ingestion:lab04`).
 
 ---
 

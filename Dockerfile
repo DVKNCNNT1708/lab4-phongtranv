@@ -31,7 +31,7 @@ RUN addgroup --system appgroup \
 
 COPY --from=builder /opt/venv /opt/venv
 COPY src/ ./src/
-
+RUN sed -i 's/status.HTTP_STATUS_CODES.get(exc.status_code, "HTTP Error")/"HTTP Error"/g' src/iot_app/main.py
 RUN chown -R appuser:appgroup /app
 
 USER appuser
