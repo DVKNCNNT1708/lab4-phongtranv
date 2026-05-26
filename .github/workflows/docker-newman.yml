@@ -35,9 +35,7 @@ jobs:
             fit4110/iot-ingestion:lab04
 
       - name: Wait for service health
-        run: |
-          # Sử dụng --method GET để tương thích với FastAPI
-          npx wait-on http://localhost:8000/health --method GET --timeout 60000 || (echo "Service failed to start! Printing logs:" && docker logs fit4110-iot-lab04 && exit 1)
+        run: npx wait-on http-get://127.0.0.1:8000/health --timeout 30000
 
       - name: Run Newman against Docker container
         run: npm run test:local
